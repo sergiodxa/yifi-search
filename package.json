@@ -34,7 +34,8 @@
     "promised-xhr": "^1.1.0",
     "react": "^0.13.3",
     "react-engine": "^1.6.0",
-    "react-router": "^0.13.3"
+    "react-router": "^0.13.3",
+    "request-promise": "^0.4.2"
   },
   "devDependencies": {
     "babel-eslint": "^3.1.15",
