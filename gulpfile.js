@@ -6,7 +6,7 @@ var gulp       = require('gulp');
 var source     = require('vinyl-source-stream');
 
 gulp.task('eslint', function () {
-  return gulp.src('./app')
+  return gulp.src('./app/**/*.jsx')
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failOnError());
