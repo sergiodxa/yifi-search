@@ -5,7 +5,7 @@ import path from 'path';
 const app = express();
 const port = Number(process.env.PORT || 3000);
 
-app.engine('.jsx', engine.create.server({
+app.engine('.jsx', engine.server.create({
   reactRoutes: 'node_modules/routes/index.jsx'
 }));
 
