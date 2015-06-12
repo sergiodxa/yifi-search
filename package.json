@@ -1,0 +1,29 @@
+{
+  "name": "yifi-search",
+  "version": "1.0.0",
+  "description": "Isomorphic Flux React.js WebApp for search torrents with the YIFI's API",
+  "main": "app/server.jsx",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergiodxa/yifi-search.git"
+  },
+  "keywords": [
+    "yifi",
+    "api",
+    "torrent",
+    "search",
+    "engine",
+    "isomorphic",
+    "flux",
+    "react"
+  ],
+  "author": "Sergio Daniel Xalambrí <sergio@xalambri.com.ar> (http://sergio.xalambri.com.ar/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergiodxa/yifi-search/issues"
+  },
+  "homepage": "https://yifi-search.herokuapp.com"
+}
