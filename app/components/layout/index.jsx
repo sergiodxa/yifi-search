@@ -2,8 +2,8 @@ import React from 'react';
 
 export default React.createClass({
   propTypes: {
-    title: React.PropTypes.String,
-    children: React.PropTypes.Any
+    title: React.PropTypes.string,
+    children: React.PropTypes.any
   },
 
   render() {
@@ -16,9 +16,7 @@ export default React.createClass({
             content="width=device-with,initial-scale=1.0" />
         </head>
         <body>
-          <main role="application" id="application">
-            { this.props.children }
-          </main>
+          { this.props.children }
         </body>
       </html>
     );
