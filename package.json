@@ -4,6 +4,7 @@
   "description": "Isomorphic Flux React.js WebApp for search torrents with the YIFI's API",
   "main": "app/server.jsx",
   "scripts": {
+    "start": "babel-node app/server.jsx",
     "test": "gulp test"
   },
   "repository": {
