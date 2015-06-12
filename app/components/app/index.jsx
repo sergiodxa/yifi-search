@@ -1,6 +1,6 @@
 import React from 'react';
 import Router from 'react-router';
-import Layout from 'components/layout';
+import Layout from '../layout';
 
 export default React.createClass({
   render() {

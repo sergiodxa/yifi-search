@@ -6,7 +6,7 @@ const app = express();
 const port = Number(process.env.PORT || 3000);
 
 app.engine('.jsx', engine.server.create({
-  reactRoutes: path.join(__dirname, 'node_modules/routes/index.jsx')
+  reactRoutes: path.join(__dirname, 'routes/index.jsx')
 }));
 
 app.set('views', path.join(__dirname, 'node_modules/views'));
