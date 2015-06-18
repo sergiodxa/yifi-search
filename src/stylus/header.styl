@@ -1,0 +1,42 @@
+.Header
+  align-items center
+  background #F5DA55
+  display flex
+  flex-direction column
+
+  &-title
+    color #222
+    font-size 1.25rem
+    line-height 2rem
+    margin 0
+    text-align center
+
+  &-form
+    flex-direction row
+    .Form-field
+      position relative
+      &-name
+        position absolute
+        left .5em
+        line-height 34px
+    .Form-input
+      border-radius 1rem 0 0 1rem
+      padding-left 4em
+    .Form-button
+      border-radius 0 50% 50% 0px
+      height 2rem
+      background #fff
+      width 2rem
+
+  @media (max-width: 639px)
+    &-title
+      width 100%
+    &-form
+      margin-bottom .25rem
+
+  @media (min-width: 640px)
+    height 2.5rem
+    flex-direction row
+    justify-content space-between
+    &-title
+      padding-left 1rem

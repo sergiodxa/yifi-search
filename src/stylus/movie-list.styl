@@ -1,0 +1,63 @@
+.MovieList
+  align-items center
+  display flex
+  flex-wrap wrap
+  justify-content space-around
+  &-item
+    cursor pointer
+    flex-basis 100%
+    margin 1rem
+    max-width 230px
+    overflow hidden
+    position relative
+    &-cover
+      background #f5da55
+      border 5px solid #f5da55
+      border-radius .5rem
+      font-size 0
+      margin 0
+      & > img
+        border-radius .5rem
+        max-width 100%
+    &-title
+      background #f5da55
+      bottom 1rem
+      font-size 1rem
+      font-weight normal
+      left 0
+      line-height 1.5em
+      margin 0
+      max-height: 3em
+      padding-left 1rem
+      padding-right 1rem
+      position absolute
+      right 0
+      text-shadow 0 0 1px white
+    &-year
+      background #f5da55
+      left -.5rem
+      padding 0 1.5rem
+      position absolute
+      top 1rem
+      transform rotate(-45deg)
+      transform-origin bottom
+    &-qualities
+      display flex
+      flex-direction column
+      justify-content space-between
+      right 0
+      list-style-type none
+      margin 0
+      padding-left 0
+      position absolute
+      top .5rem
+      & > li
+        background #f5da55
+        border-radius .5rem 0 0 .5rem
+        margin .25rem 0
+        font-size .75rem
+        & > a
+          display block
+          text-decoration none
+          color black
+          padding .5rem
