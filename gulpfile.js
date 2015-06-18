@@ -21,7 +21,8 @@ var paths = {
   src: {
     eslint: './src/es6/**/*.js',
     js    : './src/es6/app.js',
-    styl  : './src/stylus/main.styl',
+    stylus: './src/stylus/**/*.styl',
+    styles: './src/stylus/main.styl',
     jade  : './src/jade/**/*.jade'
   },
   build: {
@@ -48,29 +49,19 @@ gulp.task('build:js', ['eslint'], function () {
     .pipe(source(config.browserify.fileName))
     .pipe(buffer())
     .pipe(gulp.dest(paths.build.js))
-    .pipe(connect.reload())
 });
 
 gulp.task('build:css', function () {
-  gulp.src(paths.src.styl)
+  gulp.src(paths.src.styles)
     .pipe(stylus())
     .pipe(rename('style.css'))
     .pipe(gulp.dest(paths.build.css))
-    .pipe(connect.reload())
 });
 
 gulp.task('watch', function () {
   gulp.watch([paths.src.eslint, paths.src.jade], ['build:js']);
-  gulp.watch([paths.src.styl], ['build:css'])
+  gulp.watch([paths.src.stylus], ['build:css'])
 });
-
-gulp.task('server', function () {
-  connect.server({
-    root: './',
-    livereload: true,
-    port: 3000
-  });
-})
 
 gulp.task('build', ['build:css', 'build:js']);
 
