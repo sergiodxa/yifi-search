@@ -13,21 +13,20 @@ var config = {
   browserify: {
     fileName: 'app.js',
     extensions: ['.js'],
-    transform: [babelify, jadeify]
+    transform: [jadeify, babelify]
   }
 }
 
 var paths = {
   src: {
-    eslint: './client/src/es6/**/*.js',
-    js    : './client/src/es6/app.js',
-    styl  : './client/src/stylus/main.styl',
-    html  : './client/src/html/**/*.html'
+    eslint: './src/es6/**/*.js',
+    js    : './src/es6/app.js',
+    styl  : './src/stylus/main.styl',
+    jade  : './src/jade/**/*.jade'
   },
   build: {
-    js    : './client/build/js/',
-    css   : './client/build/css/',
-    html  : './client/build/html/'
+    js    : './build/js/',
+    css   : './build/css/'
   }
 }
 
@@ -49,19 +48,29 @@ gulp.task('build:js', ['eslint'], function () {
     .pipe(source(config.browserify.fileName))
     .pipe(buffer())
     .pipe(gulp.dest(paths.build.js))
+    .pipe(connect.reload())
 });
 
 gulp.task('build:css', function () {
-  gulp.src(paths.src.css)
+  gulp.src(paths.src.styl)
     .pipe(stylus())
     .pipe(rename('style.css'))
     .pipe(gulp.dest(paths.build.css))
+    .pipe(connect.reload())
 });
 
 gulp.task('watch', function () {
-  gulp.watch([paths.src.eslint], ['build:js']);
-  gulp.watch([paths.src.css], ['build:css'])
+  gulp.watch([paths.src.eslint, paths.src.jade], ['build:js']);
+  gulp.watch([paths.src.styl], ['build:css'])
 });
+
+gulp.task('server', function () {
+  connect.server({
+    root: './',
+    livereload: true,
+    port: 3000
+  });
+})
 
 gulp.task('build', ['build:css', 'build:js']);
 
