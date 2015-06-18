@@ -1,5 +1,5 @@
 # YIFI Search
-Isomorphic Flux React.js WebApp for search torrents with the YIFI's API.
+Backbone.js WebApp for search torrents with the YIFI's API.
 
 ## Install
 Download the Github repository with:
