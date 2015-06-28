@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YIFI Search</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- inject-style src="build/css/style.css" -->
+</head>
+<body>
+  <header class="Header">
+    <h1 class="Header-title">YIFI Search</h1>
+
+    <form action="search" class="Form Header-form">
+      <label for="search-query" class="Form-field">
+        <span class="Form-field-name">Search:</span>
+        <input type="search"
+          id="search-query"
+          class="Form-input"
+          placeholder="Actor or movie name"
+          name="query_term" />
+      </label>
+    </form>
+  </header>
+
+  <main role="application" id="app" class="App">
+    <div class="loader large"></div>
+  </main>
+
+  <script src="build/js/app.js"></script>
+</body>
+</html>
