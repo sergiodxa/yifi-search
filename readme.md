@@ -1,25 +1,6 @@
 # YIFI Search
 Backbone.js WebApp for search torrents with the YIFI's API.
 
-## Install
-Download the Github repository with:
-
-```bash
-https://github.com/sergiodxa/yifi-search.git
-```
-
-And install with
-
-```bash
-npm i
-```
-
-Then you can run the app with the command:
-
-```bash
-npm start
-```
-
 ## License
 The MIT License (MIT)
 

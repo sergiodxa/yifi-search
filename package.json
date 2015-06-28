@@ -1,7 +1,7 @@
 {
   "name": "yifi-search",
   "version": "1.0.0",
-  "description": "Isomorphic Flux React.js WebApp for search torrents with the YIFI's API",
+  "description": "Backbone.js WebApp for search torrents with the YIFI's API.",
   "main": "app/server.jsx",
   "scripts": {
     "build": "gulp build",
@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/sergiodxa/yifi-search/issues"
   },
-  "homepage": "https://yifi-search.herokuapp.com",
+  "homepage": "http://sergio.xalambri.com.ar/yifi-search",
   "dependencies": {
     "backbone": "^1.2.1",
     "jquery": "^2.1.4",
