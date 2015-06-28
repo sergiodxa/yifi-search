@@ -6,72 +6,26 @@
   <link rel="stylesheet" href="/build/css/style.css" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css' />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
+  <header class="Header">
+    <h1 class="Header-title">YIFI Search</h1>
+
+    <form action="search" class="Form Header-form">
+      <label for="search-query" class="Form-field">
+        <span class="Form-field-name">Search:</span>
+        <input type="search"
+          id="search-query"
+          class="Form-input"
+          placeholder="Actor or movie name"
+          name="query_term" />
+      </label>
+    </form>
+  </header>
+
   <main role="application" id="app" class="App">
-    <header class="Header">
-      <h1 class="Header-title">YIFI Search</h1>
-
-      <form action="search" class="Form Header-form">
-        <label for="search-query" class="Form-field">
-          <span class="Form-field-name">Search:</span>
-          <input type="search"
-            id="search-query"
-            class="Form-input"
-            placeholder="Movie name"
-            name="query_term" />
-        </label>
-        <button type="submit" class="fa fa-search Form-button">
-        </button>
-      </form>
-    </header>
-
-    <section class="MovieList">
-      <article class="MovieList-item">
-        <figure class="MovieList-item-cover">
-          <img src="https://s.ynet.io/assets/images/movies/The_Shawshank_Redemption_1994/medium-cover.jpg" alt="" />
-        </figure>
-
-        <h2 class="MovieList-item-title">
-          The Shawshank Redemption
-        </h2>
-
-        <time class="MovieList-item-year">1994</time>
-
-        <ul class="MovieList-item-qualities">
-          <li><a href="https://yts.to/torrent/download/AC418DB33FA5CEA4FAB11BC58008FE08F291C9BE.torrent">720p</a></li>
-          <li><a href="https://yts.to/torrent/download/E0D00667650ABA9EE05AACBBBD8B55EA8A51F534.torrent">1080p</a></li>
-        </ul>
-      </article>
-      <article class="MovieList-item" data-slug="the-shawshank-redemption-1994">
-        <figure class="MovieList-item-cover">
-          <img src="https://s.ynet.io/assets/images/movies/The_Shawshank_Redemption_1994/medium-cover.jpg" alt="" />
-        </figure>
-
-        <h2 class="MovieList-item-title">
-          The Shawshank Redemption
-        </h2>
-
-        <time class="MovieList-item-year">1994</time>
-
-        <ul class="MovieList-item-qualities">
-          <li><a href="https://yts.to/torrent/download/AC418DB33FA5CEA4FAB11BC58008FE08F291C9BE.torrent">720p</a></li>
-          <li><a href="https://yts.to/torrent/download/E0D00667650ABA9EE05AACBBBD8B55EA8A51F534.torrent">1080p</a></li>
-        </ul>
-      </article>
-    </section>
-
-    <nav class="Pagination">
-      <ul class="Pagination-list">
-        <li class="Pagination-item"><a href="#">1</a></li>
-        <li class="Pagination-item"><a href="#">2</a></li>
-        <li class="Pagination-item"><a href="#">3</a></li>
-        <li class="Pagination-item"><a href="#">4</a></li>
-        <li class="Pagination-item"><a href="#">5</a></li>
-      </ul>
-    </nav>
+    <div class="loader large"></div>
   </main>
 
   <script src="/build/js/app.js"></script>

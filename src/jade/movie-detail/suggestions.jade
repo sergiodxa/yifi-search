@@ -1,0 +1,10 @@
+.Suggestions
+  h3.Suggestions-title Similar movies
+  ul.Suggestions-list
+    each suggestion in movie_suggestions
+      li.Suggestions-item
+        img(src=suggestion.medium_cover_image,
+            alt=suggestion.title,
+            data-action="get-suggestion",
+            data-id=suggestion.id,
+            data-slug=suggestion.slug)

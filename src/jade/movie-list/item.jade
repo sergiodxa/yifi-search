@@ -1,0 +1,14 @@
+figure(data-action="get-detail").MovieList-item-cover
+  img(src=medium_cover_image
+      width="220"
+      height="330"
+      alt=title)
+
+h2(data-action="get-detail").MovieList-item-title=title
+
+time(data-action="get-detail").MovieList-item-year=year
+
+ul.MovieList-item-qualities
+  each torrent in torrents
+    li
+      a(href=torrent.url, data-action="download")=torrent.quality

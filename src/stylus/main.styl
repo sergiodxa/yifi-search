@@ -1,8 +1,21 @@
 body
   margin 0
   font-family 'Roboto', 'Helvetica', 'Arial', 'sans-serif'
+.App
+  background white
+  left 0
+  overflow-y auto
+  position relative
+  margin-top 68px
+  z-index 1
 
-@import 'form.styl'
-@import 'header.styl'
-@import 'movie-list.styl'
-@import 'pagination.styl'
+  @media (min-width: 400px)
+    margin-top 40px
+
+@import 'error/index.styl'
+@import 'footer/index.styl'
+@import 'form/index.styl'
+@import 'header/index.styl'
+@import 'loader/index.styl'
+@import 'movie-detail/index.styl'
+@import 'movie-list/index.styl'

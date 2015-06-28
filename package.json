@@ -31,9 +31,13 @@
   "dependencies": {
     "backbone": "^1.2.1",
     "jquery": "^2.1.4",
-    "underscore": "^1.8.3"
+    "object-assign": "^3.0.0",
+    "promised-xhr": "^1.1.0",
+    "underscore": "^1.8.3",
+    "vibrator": "0.0.1"
   },
   "devDependencies": {
+    "babel": "^5.6.7",
     "babel-eslint": "^3.1.17",
     "babel-runtime": "^5.5.8",
     "babelify": "^6.1.2",

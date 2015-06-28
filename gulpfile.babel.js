@@ -1,15 +1,16 @@
-var babelify   = require('babelify');
-var browserify = require('browserify');
-var buffer     = require('vinyl-buffer');
-var eslint     = require('gulp-eslint');
-var gulp       = require('gulp');
-var jadeify    = require('jadeify');
-var rename     = require('gulp-rename');
-var source     = require('vinyl-source-stream');
-var stylus     = require('gulp-stylus');
-var uglify     = require('gulp-uglify');
+import babelify from 'babelify';
+import browserify from 'browserify';
+import buffer from 'vinyl-buffer';
+import eslint from 'gulp-eslint';
+import gulp from 'gulp';
+import jadeify from 'jadeify';
+import minifyCSS from 'gulp-minify-css';
+import rename from 'gulp-rename';
+import source from 'vinyl-source-stream';
+import stylus from 'gulp-stylus';
+import uglify from 'gulp-uglify';
 
-var config = {
+const config = {
   browserify: {
     fileName: 'app.js',
     extensions: ['.js'],
@@ -17,7 +18,7 @@ var config = {
   }
 }
 
-var paths = {
+const paths = {
   src: {
     eslint: './src/es6/**/*.js',
     js    : './src/es6/app.js',
@@ -31,7 +32,7 @@ var paths = {
   }
 }
 
-gulp.task('eslint', function () {
+gulp.task('eslint', () => {
   return gulp
     .src(paths.src.eslint)
     .pipe(eslint())
@@ -39,7 +40,7 @@ gulp.task('eslint', function () {
     .pipe(eslint.failOnError());
 });
 
-gulp.task('build:js', ['eslint'], function () {
+gulp.task('build:js', ['eslint'], () => {
   return browserify({
     entries: paths.src.js,
     debug: true,
@@ -48,17 +49,19 @@ gulp.task('build:js', ['eslint'], function () {
   }).bundle()
     .pipe(source(config.browserify.fileName))
     .pipe(buffer())
+    .pipe(uglify())
     .pipe(gulp.dest(paths.build.js))
 });
 
-gulp.task('build:css', function () {
+gulp.task('build:css', () => {
   gulp.src(paths.src.styles)
     .pipe(stylus())
     .pipe(rename('style.css'))
+    .pipe(minifyCSS())
     .pipe(gulp.dest(paths.build.css))
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', () => {
   gulp.watch([paths.src.eslint, paths.src.jade], ['build:js']);
   gulp.watch([paths.src.stylus], ['build:css'])
 });
