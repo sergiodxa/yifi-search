@@ -3,5 +3,5 @@
     <ShortName>YIFI Search</ShortName>
     <Description>Search YIFI torrents</Description>
     <InputEncoding>UTF-8</InputEncoding>
-    <Url type="text/html" method="get" template="http://sergio.xalambri.com.ar/yifi-search/search/{searchTerms}" />
+    <Url type="text/html" method="get" template="http://sergio.xalambri.com.ar/yifi-search/#search/{searchTerms}" />
 </OpenSearchDescription>
