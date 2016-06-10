@@ -6,9 +6,9 @@ Backbone.$ = $;
 
 export default Backbone.Model.extend({
   url: {
-    details: 'https://yts.to/api/v2/movie_details.json',
-    suggestions: 'https://yts.to/api/v2/movie_suggestions.json',
-    reviews: 'https://yts.to/api/v2/movie_reviews.json'
+    details: 'https://yts.ag/api/v2/movie_details.json',
+    suggestions: 'https://yts.ag/api/v2/movie_suggestions.json',
+    reviews: 'https://yts.ag/api/v2/movie_reviews.json'
   },
 
   async: async function (method, model, options) {
