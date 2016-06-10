@@ -7,7 +7,7 @@ Backbone.$ = $;
 export default Backbone.Collection.extend({
   model: Movie,
 
-  url: 'https://yts.to/api/v2/list_movies.json',
+  url: 'https://yts.ag/api/v2/list_movies.json',
 
   async: async function (method, model, options) {
     try {
