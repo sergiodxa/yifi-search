@@ -45,6 +45,7 @@
     "gulp": "^3.9.0",
     "gulp-eslint": "^0.14.0",
     "gulp-group-css-media-queries": "^1.0.0",
+    "gulp-minify-css": "1.2.4",
     "gulp-minify-html": "^1.0.3",
     "gulp-rename": "^1.2.2",
     "gulp-style-inject": "0.0.3",
