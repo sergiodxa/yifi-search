@@ -35,6 +35,7 @@ export default async function movieDetail (slug, id) {
     // hacemos que el scroll esté arriba de todo
     $('body').scrollTop(0);
   } catch (error) {
+    console.error(error);
     $('#app').html(errorTemplate(error));
   }
 }

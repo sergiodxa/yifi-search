@@ -18,6 +18,7 @@ export default Backbone.View.extend({
   },
 
   render () {
+    console.debug(this.model.attributes)
     this.$el.html(template(this.model.attributes));
     return this;
   },

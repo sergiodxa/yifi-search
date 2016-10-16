@@ -1,23 +1,23 @@
 .People
-  h3.People-title Director
-  ul.People-list
-    each director in directors
-      li.People-list-item
-        figure.People-image
-          img(src=director.small_image,
-              alt=director.name,
-              height="60",
-              width="60")
-        div.People-name
-          strong=director.name
+  //- h3.People-title Director
+  //- ul.People-list
+  //-   each director in directors
+  //-     li.People-list-item
+  //-       figure.People-image
+  //-         img(src=director.small_image,
+  //-             alt=director.name,
+  //-             height="60",
+  //-             width="60")
+  //-       div.People-name
+  //-         strong=director.name
 
   h3.People-title Actors
   ul.People-list
-    each actor in actors
+    each actor in cast
       li.People-list-item
         figure.People-image
-          img(src=actor.small_image,
-              alt=actor-name,
+          img(src=actor.url_small_image,
+              alt=actor.name,
               height="60",
               width="60")
         div.People-name

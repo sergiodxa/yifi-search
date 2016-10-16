@@ -2,7 +2,7 @@ article.Movie
   div.Movie-data
     div.Movie-info
       figure.Movie-cover
-        img(src=images.medium_cover_image,
+        img(src=medium_cover_image,
             width="200",
             height="300",
             alt=title)
@@ -17,7 +17,8 @@ article.Movie
         each torrent in torrents
           li.Movie-downloadsList-item
             a(href=torrent.url,
-              title="Descargar en #{torrent.quality}").Movie-downloadsList-link=torrent.quality
+              title="#{torrent.quality} (#{torrent.size})"
+              class="Movie-downloadsList-link")=torrent.quality
       hr()
 
   div.Movie-suggestions

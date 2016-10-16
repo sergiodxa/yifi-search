@@ -47,6 +47,7 @@ export default async function searchResultList (query_term = null) {
     // hacemos que el scroll esté arriba de todo
     $('body').scrollTop(0);
   } catch (error) {
+    console.error(error);
     $('#app').html(errorTemplate(error));
   }
 }
