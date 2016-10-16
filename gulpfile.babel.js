@@ -45,7 +45,7 @@ gulp.task('eslint', () => {
     .pipe(eslint.failOnError());
 });
 
-gulp.task('build:js', ['eslint'], () => {
+gulp.task('build:js', () => {
   return browserify({
     entries: paths.src.js,
     debug: true,
