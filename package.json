@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/sergiodxa/yifi-search/issues"
   },
-  "homepage": "https://sergio.xalambri.xyz/yifi-search",
+  "homepage": "https://yifi.now.sh/",
   "dependencies": {
     "isomorphic-fetch": "2.2.1",
     "next": "2.0.0-beta.22"
