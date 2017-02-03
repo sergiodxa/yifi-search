@@ -1,0 +1,13 @@
+{
+  "name": "yifi-search",
+  "aliases": [
+    "yifi.now.sh"
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "type": "npm",
+  "engines": {
+    "node": "6.9.4"
+  }
+}
