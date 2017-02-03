@@ -1,5 +1,5 @@
 # YIFI Search
-Backbone.js WebApp for search torrents with the YIFI's API.
+React & Next WebApp for search torrents with the YIFI's API.
 
 ## License
 The MIT License (MIT)
