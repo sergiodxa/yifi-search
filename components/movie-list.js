@@ -9,7 +9,6 @@ class MovieList extends Component {
 
   handleNextPage = () => {
     const newPage = this.state.page + 1;
-    console.log(newPage, this.totalPages);
     if (newPage >= this.totalPages) {
       return this.setState({ page: 0 });
     }
@@ -21,7 +20,6 @@ class MovieList extends Component {
 
   handlePrevPage = () => {
     const newPage = this.state.page - 1;
-    console.log(newPage, this.totalPages);
     if (newPage <= -1) {
       return this.setState({ page: this.totalPages - 1 });
     }
