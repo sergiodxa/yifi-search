@@ -29,8 +29,8 @@ class HomePage extends Component {
 
   render() {
     return (
-      <section>
-        <header>
+      <section className="homepage">
+        <header className="header">
           <h1>YIFI Search</h1>
         </header>
 
@@ -56,12 +56,12 @@ class HomePage extends Component {
         />
 
         <style jsx>{`
-          section {
+          .homepage {
             padding: 1.5em 0;
             margin-top: 67.81px;
           }
 
-          header {
+          .header {
             background-color: rgba(0,0,0,.75);
             position: fixed;
             top: 0;
