@@ -34,8 +34,8 @@ class Movie extends Component {
 
   render() {
     return (
-      <article
-        className={this.state.hovered && 'is-hovered'}
+      <div
+        className={this.state.hovered ? 'movie is-hovered' : 'movie'}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
       >
@@ -43,29 +43,29 @@ class Movie extends Component {
           src={this.props.medium_cover_image}
         />
 
-        {this.state.hovered && (
-          <div className="box">
-            <h3>
-              {this.props.title}
-            </h3>
+        <div className="box">
+          <h3>
+            {this.props.title}
+          </h3>
 
-            <div className="meta">
-              <strong>{this.props.year}</strong>
-              {' '}
-              <small>{this.props.mpa_rating}</small>
-            </div>
-
-            <p>
-              {this.props.summary.substr(0, 140)}
-              {this.props.summary.length > 140 && '...'}
-            </p>
+          <div className="meta">
+            <strong>{this.props.year}</strong>
+            {' '}
+            <small>{this.props.mpa_rating}</small>
+            <small>{this.props.rating}</small>
           </div>
-        )}
+
+          <p>
+            {this.props.summary.substr(0, 140)}
+            {this.props.summary.length > 140 && '...'}
+          </p>
+        </div>
 
         <style jsx>{`
-          article {
+          .movie {
+            box-sizing: border-box;
             font-size: 0;
-            margin: 0 .125rem;
+            padding: 0 .125rem;
             position: relative;
             z-index: 1;
             transition: all .3s;
@@ -75,11 +75,11 @@ class Movie extends Component {
           }
 
           img {
-            width: 15vw;
+            width: calc(15vw - .25rem);
           }
 
-          article.is-hovered {
-            z-index: 2;
+          .movie.is-hovered {
+            z-index: 3;
             transform: scale(1.1);
           }
 
@@ -94,6 +94,12 @@ class Movie extends Component {
             background-color: rgba(0,0,0,.75);
             color: white;
             padding: 1em;
+            opacity: 0;
+            transition: opacity .3s;
+          }
+
+          .movie.is-hovered .box {
+            opacity: 1;
           }
 
           h3 {
@@ -114,7 +120,7 @@ class Movie extends Component {
             margin-left: .5em;
           }
         `}</style>
-      </article>
+      </div>
     );
   }
 }
