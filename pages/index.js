@@ -56,18 +56,15 @@ class HomePage extends Component {
         />
 
         <style jsx>{`
-          .homepage {
-            padding: 1.5em 0;
-            margin-top: 67.81px;
-          }
-
           .header {
             background-color: rgba(0,0,0,.75);
-            position: fixed;
+            display: flex;
+            position: sticky;
             top: 0;
             left: 0;
             right: 0;
             padding: 0 2em;
+            margin-bottom: 1.5em;
             z-index: 3;
           }
         `}</style>
