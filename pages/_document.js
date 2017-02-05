@@ -1,3 +1,4 @@
+import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document'
 
 
@@ -6,6 +7,15 @@ class MyDocument extends Document {
     return (
       <html>
         <Head>
+          <title>YIFI Search</title>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          />
           <style>{`
             body {
               background-color: #141414;
@@ -16,10 +26,6 @@ class MyDocument extends Document {
               cursor: default;
             }
           `}</style>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
         </Head>
         <body>
           <Main />
