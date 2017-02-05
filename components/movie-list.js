@@ -58,10 +58,12 @@ class MovieList extends Component {
             <i className="fa fa-angle-left" aria-hidden="true" />
           </button>
 
-          <div style={style}>
-            {props.movies.map(movie =>
-              <Movie key={movie.id} {...movie} />
-            )}
+          <div className="list-items">
+            <div style={style}>
+              {props.movies.map(movie =>
+                <Movie key={movie.id} {...movie} />
+              )}
+            </div>
           </div>
 
           <button className="next" onClick={this.handleNextPage}>
@@ -71,19 +73,23 @@ class MovieList extends Component {
 
         <style jsx>{`
           .list {
-            box-sizing: border-box;
-            overflow-x: hidden;
-            overflow-y: hidden;
-            padding: 1.5em 0;
-            position: relative;
-            width: 100%;
+            display: flex;
+            width: 100vw;
           }
 
-          .list div {
+          .list-items {
+            box-sizing: border-box;
+            padding: 1.5em 0;
+            position: relative;
+            width: 90vw;
+            overflow-x: hidden;
+            overflow-y: hidden;
+          }
+
+          .list-items div {
             align-items: center;
             display: flex;
             transition: transform .3s;
-            margin: 0 5vw;
             width: 90vw;
           }
 
@@ -94,7 +100,7 @@ class MovieList extends Component {
             margin: 0 1.5em .5em;
             text-decoration: none;
             display: inline-block;
-            min-width: 6em;
+            min-width: 15vw;
           }
 
           .prev,
@@ -102,9 +108,6 @@ class MovieList extends Component {
             background-color: rgba(0,0,0,.5);
             color: white;
             text-align: center;
-            position: absolute;
-            top: .5em;
-            bottom: .5em;
             border: none;
             width: 5vw;
             font-size: 3rem;
@@ -113,14 +116,7 @@ class MovieList extends Component {
             z-index: 2;
             cursor: pointer;
             padding: 0;
-          }
-
-          .prev {
-            left: 0;
-          }
-
-          .next {
-            right: 0;
+            margin: 1.5rem 0;
           }
         `}</style>
       </section>
