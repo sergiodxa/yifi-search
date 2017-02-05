@@ -13,7 +13,7 @@ class HomePage extends Component {
     ] = await Promise.all([
       api.movies.list({ limit: 50 }),
       api.movies.list({ limit: 50, quality: '3D' }),
-      api.movies.list({ limit: 50, minimum_rating: 8 }),
+      api.movies.list({ limit: 50, minimum_rating: 8, sort_by: 'rating' }),
       api.movies.list({ limit: 50, sort_by: 'download_count' }),
     ]);
 
