@@ -1,4 +1,6 @@
 # YIFI Search
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 React & Next WebApp for search torrents with the YIFI's API.
 
 ## License
